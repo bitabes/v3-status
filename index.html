@@ -80,6 +80,7 @@ function symRow(id, s){
       <div>Entrada: <b>${s.entry_price!=null ? "$"+s.entry_price.toLocaleString("en-US",{minimumFractionDigits:2}) : "—"}</b></div>
       <div>Precio actual: ${s.current_price!=null ? "$"+s.current_price.toLocaleString("en-US",{minimumFractionDigits:2}) : "no publicado"}</div>
       <div>PnL abierto: ${s.open_pnl_pct!=null ? ((s.open_pnl_pct>0?"+":"")+s.open_pnl_pct.toFixed(2)+"% / "+fmtUsdSigned(s.open_pnl_usd)) : "no disponible sin precio actual"}</div>
+      <div>Abierta: ${s.opened_at ?? "—"}</div>
       <div>Tiempo en operación: ${s.open_duration ?? "—"}</div>
     </div>`;
   }
