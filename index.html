@@ -20,6 +20,12 @@ h2{font-size:.9rem;color:var(--mut);margin-bottom:8px}
 .kpi div{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:8px 10px}
 .kpi b{display:block;font-size:1.15rem}
 .kpi span{color:var(--mut);font-size:.72rem;text-transform:uppercase}
+.ev time{color:var(--mut);white-space:nowrap;font-size:.75rem}
+.toggle button{background:#0d1117;color:var(--mut);border:1px solid #30363d;border-radius:6px;padding:4px 12px;margin-right:6px;cursor:pointer;font-size:.8rem}
+.toggle button.on{color:var(--acc);border-color:var(--acc)}
+#chart-wrap svg{width:100%;height:auto;display:block}
+#tooltip{display:none;position:fixed;background:#1c2128;border:1px solid #58a6ff;border-radius:6px;padding:8px 10px;font-size:.78rem;pointer-events:none;z-index:9;max-width:260px}
+#tooltip div{margin:1px 0}
 .trade{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:8px 12px;margin-top:6px;width:100%;font-size:.85rem;display:grid;gap:2px}
 .estado{margin-top:10px;font-size:.95rem;color:var(--acc)}
 .sym{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #21262d}
@@ -53,6 +59,17 @@ footer{color:var(--mut);font-size:.72rem;text-align:center;margin-top:18px}
 </div>
 <div class="card" id="btc"><h2>BTCUSDT</h2><div id="row-btc" class="sym"></div></div>
 <div class="card" id="eth"><h2>ETHUSDT</h2><div id="row-eth" class="sym"></div></div>
+<div class="card">
+  <h2>CURVA DE RESULTADOS</h2>
+  <div id="chart-stats" class="meta" style="margin-bottom:8px">—</div>
+  <div class="toggle">
+    <button id="btn-usd" class="on">$ Bankroll</button>
+    <button id="btn-pct">% Rendimiento</button>
+  </div>
+  <div id="chart-wrap"></div>
+  <div id="chart-empty" class="meta" style="display:none">La curva comenzará con el primer trade cerrado.</div>
+  <div id="tooltip"></div>
+</div>
 <div class="card"><h2>ACTIVIDAD RECIENTE</h2><div id="activity"></div></div>
 <footer>Datos simulados de un experimento de investigación (sin órdenes reales).</footer>
 <script>
@@ -71,9 +88,85 @@ function symRow(id, s){
     `<span>${s.public_state}</span>`+
     `<span class="pos-${s.position}">Posición: ${s.position}</span>`+ extra;
 }
+let LAST = null;
+let mode = "usd";
+function fmtUsd(v){return (v<0?"-$":"$")+Math.abs(v).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/,",");}
+function renderChart(curve){
+  const wrap = document.getElementById("chart-wrap");
+  const empty = document.getElementById("chart-empty");
+  if(!curve || curve.length < 2){
+    wrap.innerHTML = "";
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+  const W = 600, H = 240, PL = 46, PR = 12, PT = 12, PB = 26;
+  const vals = curve.map(p => mode==="usd" ? p.public_equity_usd : p.cumulative_pct);
+  let min = Math.min(...vals, mode==="usd"?1000:0), max = Math.max(...vals, mode==="usd"?1000:0);
+  if(max === min){ max += 1; min -= 1; }
+  const pad = (max-min)*0.08; max += pad; min -= pad;
+  const X = i => PL + i*(W-PL-PR)/(curve.length-1);
+  const Y = v => PT + (max-v)*(H-PT-PB)/(max-min);
+  const pts = curve.map((p,i)=>({x:X(i), y:Y(vals[i]), p}));
+  const path = pts.map((pt,i)=>`${i?"L":"M"}${pt.x.toFixed(1)},${pt.y.toFixed(1)}`).join(" ");
+  const y1000 = mode==="usd" ? Y(1000) : Y(0);
+  let grid = "", labels = "";
+  for(let g=0; g<=3; g++){
+    const v = min + (max-min)*g/3, y = Y(v);
+    grid += `<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#21262d"/>`;
+    labels += `<text x="${PL-6}" y="${y+3}" text-anchor="end" font-size="9" fill="#8b949e">`+
+      (mode==="usd" ? "$"+v.toFixed(0) : v.toFixed(1)+"%")+`</text>`;
+  }
+  let xlabels = "";
+  const step = Math.ceil(curve.length/8);
+  curve.forEach((p,i)=>{ if(i%step===0 || i===curve.length-1)
+    xlabels += `<text x="${X(i)}" y="${H-8}" text-anchor="middle" font-size="9" fill="#8b949e">#${p.trade}</text>`; });
+  let dots = "";
+  pts.forEach((pt,i)=>{
+    const o = pt.p.outcome;
+    const c = o==="WIN"?"#3fb950":o==="LOSS"?"#f85149":o==="BE"?"#8b949e":"#58a6ff";
+    dots += `<circle cx="${pt.x}" cy="${pt.y}" r="${o==="START"?4:5}" fill="${c}" stroke="#0d1117" stroke-width="1.5" data-i="${i}" style="cursor:pointer"/>`;
+  });
+  wrap.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">
+    ${grid}${labels}${xlabels}
+    <line x1="${PL}" y1="${y1000}" x2="${W-PR}" y2="${y1000}" stroke="#30363d" stroke-dasharray="4 3"/>
+    <path d="${path}" fill="none" stroke="#58a6ff" stroke-width="2"/>${dots}</svg>`;
+  const tip = document.getElementById("tooltip");
+  wrap.querySelectorAll("circle").forEach(c => {
+    const show = () => {
+      const p = curve[+c.dataset.i];
+      let html = `<div><b>Trade #${p.trade}${p.symbol?" — "+p.symbol:""}</b> ${p.outcome}</div>`;
+      if(p.trade > 0){
+        if(p.entry_price) html += `<div>Entrada: $${p.entry_price.toLocaleString("en-US",{minimumFractionDigits:2})}</div>`;
+        if(p.exit_price) html += `<div>Salida: $${p.exit_price.toLocaleString("en-US",{minimumFractionDigits:2})}</div>`;
+        if(p.move_pct!=null) html += `<div>Movimiento del activo: ${p.move_pct>0?"+":""}${p.move_pct}%</div>`;
+        if(p.public_impact_usd!=null) html += `<div>Impacto cuenta: ${p.public_impact_usd>0?"+":""}$${Math.abs(p.public_impact_usd).toFixed(2)}</div>`;
+        if(p.duration) html += `<div>Duración: ${p.duration}</div>`;
+        if(p.closed_at) html += `<div>Cierre: ${p.closed_at.slice(0,16).replace("T"," ")} UTC</div>`;
+      }
+      html += `<div>Bankroll: ${fmtUsd(p.public_equity_usd)} · ${p.cumulative_pct>0?"+":""}${p.cumulative_pct.toFixed(2)}%</div>`;
+      tip.innerHTML = html; tip.style.display = "block";
+      const r = c.getBoundingClientRect();
+      tip.style.left = Math.min(r.left+12, innerWidth-270) + "px";
+      tip.style.top = (r.bottom + 8) + "px";
+    };
+    c.addEventListener("mouseenter", show);
+    c.addEventListener("click", show);
+  });
+  wrap.onmouseleave = () => tip.style.display = "none";
+}
+document.getElementById("btn-usd").onclick = () => {
+  mode = "usd"; document.getElementById("btn-usd").classList.add("on");
+  document.getElementById("btn-pct").classList.remove("on");
+  if(LAST) renderChart(LAST.trade_curve); };
+document.getElementById("btn-pct").onclick = () => {
+  mode = "pct"; document.getElementById("btn-pct").classList.add("on");
+  document.getElementById("btn-usd").classList.remove("on");
+  if(LAST) renderChart(LAST.trade_curve); };
 async function load(){
   try{
     const d = await (await fetch("status.json?t="+Date.now())).json();
+    LAST = d;
     const st = document.getElementById("status");
     st.textContent = d.status; st.className = "badge " + d.status;
     document.getElementById("stale-banner").style.display = d.status==="STALE" ? "block" : "none";
@@ -88,6 +181,11 @@ async function load(){
     const g = d.public_pnl_usd ?? 0;
     document.getElementById("pnlfiat").textContent = "Ganancia/Pérdida: " + (g>0?"+":"") + "$" + Math.abs(g).toFixed(2);
     document.getElementById("estado").textContent = d.general_state || "";
+    const ts = d.trade_stats || {};
+    document.getElementById("chart-stats").textContent =
+      `Trades cerrados: ${ts.closed ?? 0} · WIN: ${ts.win ?? 0} · LOSS: ${ts.loss ?? 0} · ` +
+      `Win rate: ${ts.win_rate != null ? ts.win_rate.toFixed(2)+"%" : "—"}`;
+    renderChart(d.trade_curve);
     symRow("row-btc", d.symbols.BTCUSDT);
     symRow("row-eth", d.symbols.ETHUSDT);
     document.getElementById("activity").innerHTML = (d.activity||[]).map(e =>
