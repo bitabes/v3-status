@@ -91,21 +91,22 @@ function symRow(id, s){
 let LAST = null;
 let mode = "usd";
 function fmtUsd(v){return (v<0?"-$":"$")+Math.abs(v).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/,",");}
+function fmtUsdSigned(v){return v>0 ? "+"+fmtUsd(v) : fmtUsd(v);}
 function renderChart(curve){
   const wrap = document.getElementById("chart-wrap");
   const empty = document.getElementById("chart-empty");
-  if(!curve || curve.length < 2){
+  if(!curve || !curve.length){
     wrap.innerHTML = "";
     empty.style.display = "block";
     return;
   }
-  empty.style.display = "none";
+  empty.style.display = curve.length < 2 ? "block" : "none";
   const W = 600, H = 240, PL = 46, PR = 12, PT = 12, PB = 26;
   const vals = curve.map(p => mode==="usd" ? p.public_equity_usd : p.cumulative_pct);
   let min = Math.min(...vals, mode==="usd"?1000:0), max = Math.max(...vals, mode==="usd"?1000:0);
   if(max === min){ max += 1; min -= 1; }
   const pad = (max-min)*0.08; max += pad; min -= pad;
-  const X = i => PL + i*(W-PL-PR)/(curve.length-1);
+  const X = i => curve.length === 1 ? (PL+W-PR)/2 : PL + i*(W-PL-PR)/(curve.length-1);
   const Y = v => PT + (max-v)*(H-PT-PB)/(max-min);
   const pts = curve.map((p,i)=>({x:X(i), y:Y(vals[i]), p}));
   const path = pts.map((pt,i)=>`${i?"L":"M"}${pt.x.toFixed(1)},${pt.y.toFixed(1)}`).join(" ");
@@ -140,7 +141,7 @@ function renderChart(curve){
         if(p.entry_price) html += `<div>Entrada: $${p.entry_price.toLocaleString("en-US",{minimumFractionDigits:2})}</div>`;
         if(p.exit_price) html += `<div>Salida: $${p.exit_price.toLocaleString("en-US",{minimumFractionDigits:2})}</div>`;
         if(p.move_pct!=null) html += `<div>Movimiento del activo: ${p.move_pct>0?"+":""}${p.move_pct}%</div>`;
-        if(p.public_impact_usd!=null) html += `<div>Impacto cuenta: ${p.public_impact_usd>0?"+":""}$${Math.abs(p.public_impact_usd).toFixed(2)}</div>`;
+        if(p.public_impact_usd!=null) html += `<div>Impacto cuenta: ${fmtUsdSigned(p.public_impact_usd)}</div>`;
         if(p.duration) html += `<div>Duración: ${p.duration}</div>`;
         if(p.closed_at) html += `<div>Cierre: ${p.closed_at.slice(0,16).replace("T"," ")} UTC</div>`;
       }
@@ -179,7 +180,7 @@ async function load(){
     document.getElementById("cap0").textContent = usd(d.public_starting_capital ?? 1000);
     document.getElementById("capnow").textContent = usd(d.public_equity_usd ?? 1000);
     const g = d.public_pnl_usd ?? 0;
-    document.getElementById("pnlfiat").textContent = "Ganancia/Pérdida: " + (g>0?"+":"") + "$" + Math.abs(g).toFixed(2);
+    document.getElementById("pnlfiat").textContent = "Ganancia/Pérdida: " + fmtUsdSigned(g);
     document.getElementById("estado").textContent = d.general_state || "";
     const ts = d.trade_stats || {};
     document.getElementById("chart-stats").textContent =
