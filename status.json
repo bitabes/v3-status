@@ -1,55 +1,42 @@
 {
- "activity": [],
+ "generated_utc": "2026-08-30T11:50:08.465152+00:00",
+ "last_update_utc": "2026-08-30T11:00:10.982693+00:00",
+ "status": "RUNNING",
  "episodes": 0,
  "episodes_target": 120,
- "general_state": "Recolectando datos \u2014 esperando la primera se\u00f1al v\u00e1lida",
- "generated_utc": "2026-08-30T11:40:49.464846+00:00",
- "last_update_utc": "2026-08-30T11:00:10.982693+00:00",
- "public_equity_usd": 1000.0,
- "public_pnl_usd": 0.0,
- "public_starting_capital": 1000.0,
+ "trades": 0,
  "result_pct": 0.0,
- "status": "RUNNING",
+ "public_starting_capital": 1000.0,
+ "public_pnl_usd": 0.0,
+ "public_equity_usd": 1000.0,
+ "general_state": "Recolectando datos \u2014 esperando la primera se\u00f1al v\u00e1lida",
  "symbols": {
   "BTCUSDT": {
    "name": "BTCUSDT",
-   "position": "NONE",
-   "public_state": "Esperando se\u00f1al"
+   "public_state": "Esperando se\u00f1al",
+   "position": "NONE"
   },
   "ETHUSDT": {
    "name": "ETHUSDT",
-   "position": "NONE",
-   "public_state": "Esperando se\u00f1al"
+   "public_state": "Esperando se\u00f1al",
+   "position": "NONE"
   }
  },
+ "activity": [],
  "trade_curve": [
   {
-   "cumulative_pct": 0.0,
+   "trade": 0,
+   "symbol": null,
    "outcome": "START",
    "public_equity_usd": 1000.0,
-   "symbol": null,
-   "trade": 0
-  },
-  {
-   "closed_at": "2026-08-30T09:00:00+00:00",
-   "cumulative_pct": -0.33,
-   "duration": "1h 00m",
-   "entry_price": 78000.5,
-   "exit_price": 77250.0,
-   "move_pct": -0.96,
-   "outcome": "LOSS",
-   "public_equity_usd": 996.7,
-   "public_impact_usd": -3.3,
-   "symbol": "BTCUSDT",
-   "trade": 1
+   "cumulative_pct": 0.0
   }
  ],
  "trade_stats": {
-  "closed": 1,
-  "loss": 1,
-  "reconciled": false,
+  "closed": 0,
   "win": 0,
-  "win_rate": 0.0
- },
- "trades": 0
+  "loss": 0,
+  "win_rate": null,
+  "reconciled": true
+ }
 }
