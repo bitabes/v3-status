@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V3.1 Shadow Test</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--tx:#e6edf3;--mut:#8b949e;--ok:#3fb950;--warn:#d29922;--err:#f85149}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--tx);padding:16px;max-width:640px;margin:0 auto;font-size:15px}
+.card{background:var(--card);border:1px solid #30363d;border-radius:10px;padding:14px 16px;margin-bottom:14px}
+h1{font-size:1.15rem;margin-bottom:10px}
+h2{font-size:.9rem;color:var(--mut);margin-bottom:8px}
+.badge{display:inline-block;padding:3px 12px;border-radius:20px;font-weight:700;font-size:.85rem}
+.RUNNING{background:#12351d;color:var(--ok)}
+.STALE{background:#3b2f0b;color:var(--warn)}
+.ERROR{background:#43111a;color:var(--err)}
+.meta{color:var(--mut);font-size:.8rem;margin-top:6px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+.kpi div{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:8px 10px}
+.kpi b{display:block;font-size:1.15rem}
+.kpi span{color:var(--mut);font-size:.72rem;text-transform:uppercase}
+.estado{margin-top:10px;font-size:.95rem;color:var(--acc)}
+.sym{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #21262d}
+.sym:last-child{border-bottom:none}
+.sym .name{font-weight:700}
+.pos-LONG{color:var(--ok);font-weight:700}
+.pos-NONE{color:var(--mut)}
+.ev{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid #21262d;font-size:.85rem;align-items:baseline}
+.ev:last-child{border-bottom:none}
+.ev time{color:var(--mut);white-space:nowrap;font-size:.75rem}
+footer{color:var(--mut);font-size:.72rem;text-align:center;margin-top:18px}
+#stale-banner{display:none;background:#3b2f0b;color:#f0c674;border:1px solid #d29922;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-weight:600}
+</style>
+</head>
+<body>
+<div id="stale-banner">⚠️ Actualización retrasada — sin datos nuevos de V3 en más de 2 horas</div>
+<div class="card">
+  <h1>V3.1 SHADOW TEST <span id="status" class="badge">…</span></h1>
+  <div class="meta">Última actualización: <span id="lastv3">—</span> UTC · auto-refresh 60s</div>
+  <div class="kpi" style="margin-top:10px">
+    <div><span>Episodios</span><b id="eps">—</b></div>
+    <div><span>Trades</span><b id="trades">—</b></div>
+    <div><span>Resultado</span><b id="pnl">—</b></div>
+  </div>
+  <div class="estado" id="estado">—</div>
+</div>
+<div class="card" id="btc"><h2>BTCUSDT</h2><div id="row-btc" class="sym"></div></div>
+<div class="card" id="eth"><h2>ETHUSDT</h2><div id="row-eth" class="sym"></div></div>
+<div class="card"><h2>ACTIVIDAD RECIENTE</h2><div id="activity"></div></div>
+<footer>Datos simulados de un experimento de investigación (sin órdenes reales).</footer>
+<script>
+function symRow(id, s){
+  document.getElementById(id).innerHTML =
+    `<span class="name">${s.name}</span>`+
+    `<span>${s.public_state}</span>`+
+    `<span class="pos-${s.position}">Posición: ${s.position}</span>`;
+}
+async function load(){
+  try{
+    const d = await (await fetch("status.json?t="+Date.now())).json();
+    const st = document.getElementById("status");
+    st.textContent = d.status; st.className = "badge " + d.status;
+    document.getElementById("stale-banner").style.display = d.status==="STALE" ? "block" : "none";
+    document.getElementById("lastv3").textContent = d.last_update_utc ? d.last_update_utc.slice(0,19).replace("T"," ") : "—";
+    document.getElementById("eps").textContent = (d.episodes ?? "—") + " / " + d.episodes_target;
+    document.getElementById("trades").textContent = d.trades ?? "—";
+    const p = d.result_pct;
+    document.getElementById("pnl").textContent = p==null?"—":(p>0?"+":"")+p.toFixed(2)+"%";
+    document.getElementById("estado").textContent = d.general_state || "";
+    symRow("row-btc", d.symbols.BTCUSDT);
+    symRow("row-eth", d.symbols.ETHUSDT);
+    document.getElementById("activity").innerHTML = (d.activity||[]).map(e =>
+      `<div class="ev"><span>${e.icon}</span><time>${(e.time||"").slice(0,16).replace("T"," ")}</time>`+
+      `<span>${e.text}</span></div>`).join("") || "<div class='ev'>Sin actividad aún.</div>";
+  }catch(err){
+    const st=document.getElementById("status");
+    st.textContent="ERROR"; st.className="badge ERROR";
+  }
+}
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>
