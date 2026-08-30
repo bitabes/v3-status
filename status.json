@@ -1,42 +1,42 @@
 {
- "generated_utc": "2026-08-30T11:50:08.465152+00:00",
- "last_update_utc": "2026-08-30T11:00:10.982693+00:00",
- "status": "RUNNING",
+ "activity": [],
  "episodes": 0,
  "episodes_target": 120,
- "trades": 0,
- "result_pct": 0.0,
- "public_starting_capital": 1000.0,
- "public_pnl_usd": 0.0,
- "public_equity_usd": 1000.0,
  "general_state": "Recolectando datos \u2014 esperando la primera se\u00f1al v\u00e1lida",
+ "generated_utc": "2026-08-30T11:51:54.498033+00:00",
+ "last_update_utc": "2026-08-30T11:00:10.982693+00:00",
+ "public_equity_usd": 1000.0,
+ "public_pnl_usd": 0.0,
+ "public_starting_capital": 1000.0,
+ "result_pct": 0.0,
+ "status": "RUNNING",
  "symbols": {
   "BTCUSDT": {
    "name": "BTCUSDT",
-   "public_state": "Esperando se\u00f1al",
-   "position": "NONE"
+   "position": "NONE",
+   "public_state": "Esperando se\u00f1al"
   },
   "ETHUSDT": {
    "name": "ETHUSDT",
-   "public_state": "Esperando se\u00f1al",
-   "position": "NONE"
+   "position": "NONE",
+   "public_state": "Esperando se\u00f1al"
   }
  },
- "activity": [],
  "trade_curve": [
   {
-   "trade": 0,
-   "symbol": null,
+   "cumulative_pct": 0.0,
    "outcome": "START",
    "public_equity_usd": 1000.0,
-   "cumulative_pct": 0.0
+   "symbol": null,
+   "trade": 0
   }
  ],
  "trade_stats": {
   "closed": 0,
-  "win": 0,
   "loss": 0,
-  "win_rate": null,
-  "reconciled": true
- }
+  "reconciled": true,
+  "win": 0,
+  "win_rate": null
+ },
+ "trades": 0
 }
