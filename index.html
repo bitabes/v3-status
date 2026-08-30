@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>V3.1 Shadow Test</title>
 <style>
-:root{--bg:#0d1117;--card:#161b22;--tx:#e6edf3;--mut:#8b949e;--ok:#3fb950;--warn:#d29922;--err:#f85149}
+:root{--bg:#0d1117;--card:#161b22;--tx:#e6edf3;--mut:#8b949e;--ok:#3fb950;--warn:#d29922;--err:#f85149;--acc:#58a6ff}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--tx);padding:16px;max-width:640px;margin:0 auto;font-size:15px}
 .card{background:var(--card);border:1px solid #30363d;border-radius:10px;padding:14px 16px;margin-bottom:14px}
@@ -79,7 +79,7 @@ function symRow(id, s){
     extra = `<div class="trade">
       <div>Entrada: <b>${s.entry_price!=null ? "$"+s.entry_price.toLocaleString("en-US",{minimumFractionDigits:2}) : "—"}</b></div>
       <div>Precio actual: ${s.current_price!=null ? "$"+s.current_price.toLocaleString("en-US",{minimumFractionDigits:2}) : "no publicado"}</div>
-      <div>PnL abierto: ${s.open_pnl_pct!=null ? ((s.open_pnl_pct>0?"+":"")+s.open_pnl_pct.toFixed(2)+"% / "+((s.open_pnl_usd>0?"+":"")+"$"+Math.abs(s.open_pnl_usd).toFixed(2))) : "no disponible sin precio actual"}</div>
+      <div>PnL abierto: ${s.open_pnl_pct!=null ? ((s.open_pnl_pct>0?"+":"")+s.open_pnl_pct.toFixed(2)+"% / "+fmtUsdSigned(s.open_pnl_usd)) : "no disponible sin precio actual"}</div>
       <div>Tiempo en operación: ${s.open_duration ?? "—"}</div>
     </div>`;
   }
