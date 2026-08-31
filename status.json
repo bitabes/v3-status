@@ -1,10 +1,16 @@
 {
- "activity": [],
- "episodes": 0,
+ "activity": [
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "BTC \u2014 Se\u00f1al detectada",
+   "time": "2026-08-31T04:08:14.959719+00:00"
+  }
+ ],
+ "episodes": 1,
  "episodes_target": 120,
- "general_state": "Recolectando datos \u2014 esperando la primera se\u00f1al v\u00e1lida",
- "generated_utc": "2026-08-31T03:50:12.660550+00:00",
- "last_update_utc": "2026-08-31T03:34:03.308423+00:00",
+ "general_state": "Recolectando datos",
+ "generated_utc": "2026-08-31T04:10:11.943545+00:00",
+ "last_update_utc": "2026-08-31T04:08:15.968559+00:00",
  "public_equity_usd": 1000.0,
  "public_pnl_usd": 0.0,
  "public_starting_capital": 1000.0,
@@ -14,7 +20,7 @@
   "BTCUSDT": {
    "name": "BTCUSDT",
    "position": "NONE",
-   "public_state": "Esperando se\u00f1al"
+   "public_state": "Se\u00f1al detectada"
   },
   "ETHUSDT": {
    "name": "ETHUSDT",
