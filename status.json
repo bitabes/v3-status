@@ -9,18 +9,20 @@
  "episodes": 1,
  "episodes_target": 120,
  "general_state": "Recolectando datos",
- "generated_utc": "2026-08-31T04:10:11.943545+00:00",
+ "generated_utc": "2026-08-31T04:30:12.935363+00:00",
  "last_update_utc": "2026-08-31T04:08:15.968559+00:00",
  "public_equity_usd": 1000.0,
  "public_pnl_usd": 0.0,
  "public_starting_capital": 1000.0,
  "result_pct": 0.0,
+ "signals_detected": 1,
+ "signals_skipped": 0,
  "status": "RUNNING",
  "symbols": {
   "BTCUSDT": {
    "name": "BTCUSDT",
    "position": "NONE",
-   "public_state": "Se\u00f1al detectada"
+   "public_state": "\ud83d\udfe0 Entrada pendiente"
   },
   "ETHUSDT": {
    "name": "ETHUSDT",
