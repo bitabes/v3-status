@@ -6,10 +6,10 @@
    "time": "2026-08-31T04:08:14.959719+00:00"
   }
  ],
- "episodes": 1,
+ "episodes": 0,
  "episodes_target": 120,
- "general_state": "Recolectando datos",
- "generated_utc": "2026-08-31T04:30:12.935363+00:00",
+ "general_state": "Recolectando datos \u2014 esperando la primera se\u00f1al v\u00e1lida",
+ "generated_utc": "2026-08-31T04:40:10.209743+00:00",
  "last_update_utc": "2026-08-31T04:08:15.968559+00:00",
  "public_equity_usd": 1000.0,
  "public_pnl_usd": 0.0,
