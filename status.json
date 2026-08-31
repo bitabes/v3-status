@@ -1,6 +1,16 @@
 {
  "activity": [
   {
+   "icon": "\u26aa",
+   "text": "BTC \u2014 Trade no tomado \u2014 entrada expirada por downtime (~59 min tarde)",
+   "time": "2026-08-31T06:00:13.313773+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "BTC \u2014 Se\u00f1al LONG detectada",
+   "time": "2026-08-31T06:00:13.313773+00:00"
+  },
+  {
    "icon": "\ud83d\udfe1",
    "text": "BTC \u2014 Se\u00f1al detectada",
    "time": "2026-08-31T04:08:14.959719+00:00"
@@ -9,20 +19,20 @@
  "episodes": 0,
  "episodes_target": 120,
  "general_state": "Recolectando datos \u2014 esperando la primera se\u00f1al v\u00e1lida",
- "generated_utc": "2026-08-31T04:40:10.209743+00:00",
- "last_update_utc": "2026-08-31T04:08:15.968559+00:00",
+ "generated_utc": "2026-08-31T06:10:12.135870+00:00",
+ "last_update_utc": "2026-08-31T06:00:14.965556+00:00",
  "public_equity_usd": 1000.0,
  "public_pnl_usd": 0.0,
  "public_starting_capital": 1000.0,
  "result_pct": 0.0,
  "signals_detected": 1,
- "signals_skipped": 0,
+ "signals_skipped": 1,
  "status": "RUNNING",
  "symbols": {
   "BTCUSDT": {
    "name": "BTCUSDT",
    "position": "NONE",
-   "public_state": "\ud83d\udfe0 Entrada pendiente"
+   "public_state": "Esperando se\u00f1al"
   },
   "ETHUSDT": {
    "name": "ETHUSDT",
