@@ -2,12 +2,12 @@
  "activity": [
   {
    "icon": "\ud83d\udd34",
-   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,474.24 \u00b7 Stop Loss: $2,433.04 (-1.67%) \u00b7 Notional: $826.17 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $82.62 / $68.85 / $59.01 \u00b7 Salida: $2,471.31 \u00b7 Movimiento del activo: -0.12% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$0.83 \u00b7 PnL neto: -$1.81 \u00b7 Equity ETH: $10,000.00 \u2192 $9,998.19",
+   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,474.24 \u00b7 Stop Loss: $2,433.05 (-1.67%) \u00b7 Notional: $826.17 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $82.62 / $68.85 / $59.01 \u00b7 Salida: $2,471.31 \u00b7 Movimiento del activo: -0.12% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$0.83 \u00b7 Funding: 0.00 \u00b7 PnL precio: -$0.98 \u00b7 PnL neto: -$1.81 \u00b7 Equity ETH: $10,000.00 \u2192 $9,998.19",
    "time": "2026-08-31T21:00:08.277663+00:00"
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $78,869.17 \u00b7 Stop Loss: $77,828.47 (-1.32%) \u00b7 Notional: $1,445.63 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $144.56 / $120.47 / $103.26 \u00b7 Salida: $78,818.83 \u00b7 Movimiento del activo: -0.06% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.45 \u00b7 PnL neto: -$2.37 \u00b7 Equity BTC: $10,000.00 \u2192 $9,997.63",
+   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $78,869.17 \u00b7 Stop Loss: $77,828.47 (-1.32%) \u00b7 Notional: $1,445.63 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $144.56 / $120.47 / $103.26 \u00b7 Salida: $78,818.83 \u00b7 Movimiento del activo: -0.06% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.45 \u00b7 Funding: 0.00 \u00b7 PnL precio: -$0.92 \u00b7 PnL neto: -$2.37 \u00b7 Equity BTC: $10,000.00 \u2192 $9,997.63",
    "time": "2026-08-31T21:00:07.283463+00:00"
   },
   {
@@ -52,8 +52,8 @@
  "episodes": 2,
  "episodes_target": 120,
  "general_state": "Recolectando datos",
- "generated_utc": "2026-09-01T04:30:13.617527+00:00",
- "last_update_utc": "2026-09-01T04:00:13.763481+00:00",
+ "generated_utc": "2026-09-01T05:05:43.771740+00:00",
+ "last_update_utc": "2026-09-01T05:00:12.845181+00:00",
  "result_pct": -0.02,
  "signals_detected": 3,
  "signals_skipped": 1,
