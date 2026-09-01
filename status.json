@@ -1,35 +1,4 @@
 {
- "generated_utc": "2026-09-01T06:16:07.007670+00:00",
- "last_update_utc": "2026-09-01T06:00:20.309676+00:00",
- "status": "RUNNING",
- "episodes": 2,
- "episodes_target": 120,
- "signals_detected": 3,
- "signals_skipped": 1,
- "trades": 2,
- "result_pct": -0.02,
- "combined_starting_capital": 20000.0,
- "combined_current_capital": 19995.83,
- "combined_pnl_usd": -4.17,
- "general_state": "Recolectando datos",
- "symbols": {
-  "BTCUSDT": {
-   "name": "BTCUSDT",
-   "public_state": "Esperando se\u00f1al",
-   "position": "NONE",
-   "equity_usd": 9997.63,
-   "pnl_usd": -2.37,
-   "pnl_pct": -0.02
-  },
-  "ETHUSDT": {
-   "name": "ETHUSDT",
-   "public_state": "Esperando se\u00f1al",
-   "position": "NONE",
-   "equity_usd": 9998.19,
-   "pnl_usd": -1.81,
-   "pnl_pct": -0.02
-  }
- },
  "activity": [
   {
    "icon": "\ud83d\udd34",
@@ -77,81 +46,112 @@
    "time": "2026-08-31T04:08:14.959719+00:00"
   }
  ],
+ "combined_current_capital": 19995.83,
+ "combined_pnl_usd": -4.17,
+ "combined_starting_capital": 20000.0,
+ "episodes": 2,
+ "episodes_target": 120,
+ "general_state": "Recolectando datos",
+ "generated_utc": "2026-09-01T07:10:11.829809+00:00",
+ "last_update_utc": "2026-09-01T07:00:14.860805+00:00",
+ "result_pct": -0.02,
+ "signals_detected": 3,
+ "signals_skipped": 1,
+ "status": "RUNNING",
+ "symbols": {
+  "BTCUSDT": {
+   "equity_usd": 9997.63,
+   "name": "BTCUSDT",
+   "pnl_pct": -0.02,
+   "pnl_usd": -2.37,
+   "position": "NONE",
+   "public_state": "Esperando se\u00f1al"
+  },
+  "ETHUSDT": {
+   "equity_usd": 9998.19,
+   "name": "ETHUSDT",
+   "pnl_pct": -0.02,
+   "pnl_usd": -1.81,
+   "position": "NONE",
+   "public_state": "Esperando se\u00f1al"
+  }
+ },
  "trade_curve": [
   {
-   "trade": 0,
-   "symbol": null,
+   "cumulative_pct": 0.0,
    "outcome": "START",
    "public_equity_usd": 10000.0,
-   "cumulative_pct": 0.0
+   "symbol": null,
+   "trade": 0
   },
   {
-   "trade": 1,
-   "symbol": "BTCUSDT",
-   "outcome": "LOSS",
-   "public_equity_usd": 9997.63,
-   "cumulative_pct": -0.02,
-   "public_impact_usd": -2.37,
-   "entry_price": 78869.17,
-   "exit_price": 78818.83,
-   "duration": "2h 00m",
-   "closed_at": "2026-08-31T20:00:00+00:00",
-   "entry_at": "2026-08-31T18:00:00+00:00",
-   "move_pct": -0.06,
-   "stop_price": 77828.47,
-   "stop_pct": -1.32,
-   "notional": 1445.63,
    "accepted_leverages": [
     10,
     12,
     14
    ],
+   "closed_at": "2026-08-31T20:00:00+00:00",
+   "cumulative_pct": -0.02,
+   "duration": "2h 00m",
+   "entry_at": "2026-08-31T18:00:00+00:00",
+   "entry_price": 78869.17,
+   "exit_price": 78818.83,
+   "exit_reason": "Strategy Exit",
+   "fees": -1.45,
+   "funding": 0,
    "margins": {
     "10": 144.56,
     "12": 120.47,
     "14": 103.26
    },
-   "exit_reason": "Strategy Exit",
+   "move_pct": -0.06,
+   "notional": 1445.63,
+   "outcome": "LOSS",
    "pnl_price": -0.92,
-   "fees": -1.45,
-   "funding": 0
+   "public_equity_usd": 9997.63,
+   "public_impact_usd": -2.37,
+   "stop_pct": -1.32,
+   "stop_price": 77828.47,
+   "symbol": "BTCUSDT",
+   "trade": 1
   },
   {
-   "trade": 2,
-   "symbol": "ETHUSDT",
-   "outcome": "LOSS",
-   "public_equity_usd": 9998.19,
-   "cumulative_pct": -0.02,
-   "public_impact_usd": -1.81,
-   "entry_price": 2474.24,
-   "exit_price": 2471.31,
-   "duration": "2h 00m",
-   "closed_at": "2026-08-31T20:00:00+00:00",
-   "entry_at": "2026-08-31T18:00:00+00:00",
-   "move_pct": -0.12,
-   "stop_price": 2433.05,
-   "stop_pct": -1.67,
-   "notional": 826.17,
    "accepted_leverages": [
     10,
     12,
     14
    ],
+   "closed_at": "2026-08-31T20:00:00+00:00",
+   "cumulative_pct": -0.02,
+   "duration": "2h 00m",
+   "entry_at": "2026-08-31T18:00:00+00:00",
+   "entry_price": 2474.24,
+   "exit_price": 2471.31,
+   "exit_reason": "Strategy Exit",
+   "fees": -0.83,
+   "funding": 0,
    "margins": {
     "10": 82.62,
     "12": 68.85,
     "14": 59.01
    },
-   "exit_reason": "Strategy Exit",
+   "move_pct": -0.12,
+   "notional": 826.17,
+   "outcome": "LOSS",
    "pnl_price": -0.98,
-   "fees": -0.83,
-   "funding": 0
+   "public_equity_usd": 9998.19,
+   "public_impact_usd": -1.81,
+   "stop_pct": -1.67,
+   "stop_price": 2433.05,
+   "symbol": "ETHUSDT",
+   "trade": 2
   }
  ],
  "trade_stats": {
   "closed": 2,
-  "win": 0,
   "loss": 2,
+  "win": 0,
   "win_rate": 0.0
- }
+ },
+ "trades": 2
 }
