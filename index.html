@@ -52,8 +52,10 @@ footer{color:var(--mut);font-size:.72rem;text-align:center;margin-top:18px}
   </div>
   <div class="meta" id="pnlfiat" style="margin-top:6px">—</div>
   <div class="kpi" style="margin-top:10px">
-    <div><span>Episodios</span><b id="eps">—</b></div>
+    <div><span>Episodios válidos</span><b id="eps">—</b></div>
     <div><span>Trades</span><b id="trades">—</b></div>
+    <div><span>Señales detectadas</span><b id="sigs">—</b></div>
+    <div><span>No operadas</span><b id="skipped">—</b></div>
   </div>
   <div class="estado" id="estado">—</div>
 </div>
@@ -65,6 +67,8 @@ footer{color:var(--mut);font-size:.72rem;text-align:center;margin-top:18px}
   <div class="toggle">
     <button id="btn-usd" class="on">$ Bankroll</button>
     <button id="btn-pct">% Rendimiento</button>
+    <button id="btn-btc" class="on sym-btn">BTC</button>
+    <button id="btn-eth" class="sym-btn">ETH</button>
   </div>
   <div id="chart-wrap"></div>
   <div id="chart-empty" class="meta" style="display:none">La curva comenzará con el primer trade cerrado.</div>
@@ -75,6 +79,10 @@ footer{color:var(--mut);font-size:.72rem;text-align:center;margin-top:18px}
 <script>
 function symRow(id, s){
   let extra = "";
+  let cap = "";
+  if (s.equity_usd != null){
+    cap = `<div class="meta">Equity: ${fmtUsd(s.equity_usd)} · PnL: ${fmtUsdSigned(s.pnl_usd)} (${(s.pnl_pct>0?"+":"")}${s.pnl_pct.toFixed(2)}%) · Capital inicial: $10,000.00</div>`;
+  }
   if (s.position === "LONG"){
     extra = `<div class="trade">
       <div>Entrada: <b>${s.entry_price!=null ? "$"+s.entry_price.toLocaleString("en-US",{minimumFractionDigits:2}) : "—"}</b></div>
@@ -87,15 +95,20 @@ function symRow(id, s){
   document.getElementById(id).innerHTML =
     `<span class="name">${s.name}</span>`+
     `<span>${s.public_state}</span>`+
-    `<span class="pos-${s.position}">Posición: ${s.position}</span>`+ extra;
+    `<span class="pos-${s.position}">Posición: ${s.position}</span>`+ cap + extra;
 }
 let LAST = null;
 let mode = "usd";
+let curveSym = "BTCUSDT";
 function fmtUsd(v){return (v<0?"-$":"$")+Math.abs(v).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/,",");}
 function fmtUsdSigned(v){return v>0 ? "+"+fmtUsd(v) : fmtUsd(v);}
-function renderChart(curve){
+function renderChart(curveAll){
   const wrap = document.getElementById("chart-wrap");
   const empty = document.getElementById("chart-empty");
+  // curva por SLEEVE: solo puntos del símbolo seleccionado + punto START ($10,000)
+  const curve = [{trade:0, symbol:null, outcome:"START",
+                  public_equity_usd:10000, cumulative_pct:0}]
+    .concat((curveAll||[]).filter(p => p.trade > 0 && p.symbol === curveSym));
   if(!curve || !curve.length){
     wrap.innerHTML = "";
     empty.style.display = "block";
@@ -104,14 +117,14 @@ function renderChart(curve){
   empty.style.display = curve.length < 2 ? "block" : "none";
   const W = 600, H = 240, PL = 46, PR = 12, PT = 12, PB = 26;
   const vals = curve.map(p => mode==="usd" ? p.public_equity_usd : p.cumulative_pct);
-  let min = Math.min(...vals, mode==="usd"?1000:0), max = Math.max(...vals, mode==="usd"?1000:0);
+  let min = Math.min(...vals, mode==="usd"?10000:0), max = Math.max(...vals, mode==="usd"?10000:0);
   if(max === min){ max += 1; min -= 1; }
   const pad = (max-min)*0.08; max += pad; min -= pad;
   const X = i => curve.length === 1 ? (PL+W-PR)/2 : PL + i*(W-PL-PR)/(curve.length-1);
   const Y = v => PT + (max-v)*(H-PT-PB)/(max-min);
   const pts = curve.map((p,i)=>({x:X(i), y:Y(vals[i]), p}));
   const path = pts.map((pt,i)=>`${i?"L":"M"}${pt.x.toFixed(1)},${pt.y.toFixed(1)}`).join(" ");
-  const y1000 = mode==="usd" ? Y(1000) : Y(0);
+  const y1000 = mode==="usd" ? Y(10000) : Y(0);
   let grid = "", labels = "";
   for(let g=0; g<=3; g++){
     const v = min + (max-min)*g/3, y = Y(v);
@@ -140,13 +153,25 @@ function renderChart(curve){
       let html = `<div><b>Trade #${p.trade}${p.symbol?" — "+p.symbol:""}</b> ${p.outcome}</div>`;
       if(p.trade > 0){
         if(p.entry_price) html += `<div>Entrada: $${p.entry_price.toLocaleString("en-US",{minimumFractionDigits:2})}</div>`;
+        if(p.stop_price) html += `<div>Stop Loss: $${p.stop_price.toLocaleString("en-US",{minimumFractionDigits:2})} (${p.stop_pct>0?"+":""}${p.stop_pct}%)</div>`;
         if(p.exit_price) html += `<div>Salida: $${p.exit_price.toLocaleString("en-US",{minimumFractionDigits:2})}</div>`;
+        if(p.notional) html += `<div>Notional: $${p.notional.toLocaleString("en-US",{minimumFractionDigits:2})}</div>`;
+        if(p.accepted_leverages && p.accepted_leverages.length)
+          html += `<div>Leverage aceptable: ${p.accepted_leverages.map(l=>l+"x").join(" / ")}</div>`;
+        if(p.margins && p.accepted_leverages && p.accepted_leverages.length)
+          html += `<div>Margen requerido: ${p.accepted_leverages.map(l=>"$"+p.margins[l].toLocaleString("en-US",{minimumFractionDigits:2})).join(" / ")}</div>`;
+        if(p.exit_reason) html += `<div>Motivo salida: ${p.exit_reason}</div>`;
         if(p.move_pct!=null) html += `<div>Movimiento del activo: ${p.move_pct>0?"+":""}${p.move_pct}%</div>`;
-        if(p.public_impact_usd!=null) html += `<div>Impacto cuenta: ${fmtUsdSigned(p.public_impact_usd)}</div>`;
+        if(p.pnl_price!=null) html += `<div>PnL precio: ${fmtUsdSigned(p.pnl_price)}</div>`;
+        if(p.fees!=null) html += `<div>Fees: ${fmtUsd(p.fees)}</div>`;
+        if(p.funding!=null) html += `<div>Funding: ${fmtUsdSigned(p.funding)}</div>`;
+        if(p.public_impact_usd!=null) html += `<div>PnL neto: ${fmtUsdSigned(p.public_impact_usd)}</div>`;
         if(p.duration) html += `<div>Duración: ${p.duration}</div>`;
         if(p.closed_at) html += `<div>Cierre: ${p.closed_at.slice(0,16).replace("T"," ")} UTC</div>`;
+        if(p.public_before_usd!=null && p.public_equity_usd!=null)
+          html += `<div>Equity: ${fmtUsd(p.public_before_usd)} → ${fmtUsd(p.public_equity_usd)}</div>`;
       }
-      html += `<div>Bankroll: ${fmtUsd(p.public_equity_usd)} · ${p.cumulative_pct>0?"+":""}${p.cumulative_pct.toFixed(2)}%</div>`;
+      html += `<div>Equity: ${fmtUsd(p.public_equity_usd)} · ${(p.cumulative_pct>0?"+":"")}${p.cumulative_pct.toFixed(2)}%</div>`;
       tip.innerHTML = html; tip.style.display = "block";
       const r = c.getBoundingClientRect();
       tip.style.left = Math.min(r.left+12, innerWidth-270) + "px";
@@ -165,6 +190,14 @@ document.getElementById("btn-pct").onclick = () => {
   mode = "pct"; document.getElementById("btn-pct").classList.add("on");
   document.getElementById("btn-usd").classList.remove("on");
   if(LAST) renderChart(LAST.trade_curve); };
+document.getElementById("btn-btc").onclick = () => {
+  curveSym = "BTCUSDT"; document.getElementById("btn-btc").classList.add("on");
+  document.getElementById("btn-eth").classList.remove("on");
+  if(LAST) renderChart(LAST.trade_curve); };
+document.getElementById("btn-eth").onclick = () => {
+  curveSym = "ETHUSDT"; document.getElementById("btn-eth").classList.add("on");
+  document.getElementById("btn-btc").classList.remove("on");
+  if(LAST) renderChart(LAST.trade_curve); };
 async function load(){
   try{
     const d = await (await fetch("status.json?t="+Date.now())).json();
@@ -175,12 +208,14 @@ async function load(){
     document.getElementById("lastv3").textContent = d.last_update_utc ? d.last_update_utc.slice(0,19).replace("T"," ") : "—";
     document.getElementById("eps").textContent = (d.episodes ?? "—") + " / " + d.episodes_target;
     document.getElementById("trades").textContent = d.trades ?? "—";
+    document.getElementById("sigs").textContent = d.signals_detected ?? "—";
+    document.getElementById("skipped").textContent = d.signals_skipped ?? "—";
     const p = d.result_pct;
     document.getElementById("pnl").textContent = p==null?"—":(p>0?"+":"")+p.toFixed(2)+"%";
     const usd = v => (v<0?"-$":"$")+Math.abs(v).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/,",");
-    document.getElementById("cap0").textContent = usd(d.public_starting_capital ?? 1000);
-    document.getElementById("capnow").textContent = usd(d.public_equity_usd ?? 1000);
-    const g = d.public_pnl_usd ?? 0;
+    document.getElementById("cap0").textContent = usd(d.combined_starting_capital ?? 20000);
+    document.getElementById("capnow").textContent = usd(d.combined_current_capital ?? "—");
+    const g = d.combined_pnl_usd ?? 0;
     document.getElementById("pnlfiat").textContent = "Ganancia/Pérdida: " + fmtUsdSigned(g);
     document.getElementById("estado").textContent = d.general_state || "";
     const ts = d.trade_stats || {};
