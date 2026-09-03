@@ -2,6 +2,16 @@
  "activity": [
   {
    "icon": "\ud83d\udfe2",
+   "text": "ETH \u2014 LONG abierto a $2,512.42",
+   "time": "2026-09-03T19:00:13.864113+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "ETH \u2014 Se\u00f1al detectada",
+   "time": "2026-09-03T19:00:13.864113+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe2",
    "text": "BTC \u2014 LONG abierto a $80,591.32",
    "time": "2026-09-03T15:00:12.981333+00:00"
   },
@@ -59,13 +69,13 @@
  "combined_current_capital": 19995.83,
  "combined_pnl_usd": -4.17,
  "combined_starting_capital": 20000.0,
- "episodes": 3,
+ "episodes": 4,
  "episodes_target": 120,
  "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-09-03T18:10:32.254535+00:00",
- "last_update_utc": "2026-09-03T18:00:12.959979+00:00",
+ "generated_utc": "2026-09-03T19:10:11.356153+00:00",
+ "last_update_utc": "2026-09-03T19:00:13.864113+00:00",
  "result_pct": -0.02,
- "signals_detected": 4,
+ "signals_detected": 5,
  "signals_skipped": 1,
  "status": "RUNNING",
  "symbols": {
@@ -74,7 +84,7 @@
    "entry_price": 80591.32,
    "equity_usd": 9997.63,
    "name": "BTCUSDT",
-   "open_duration": "3h 10m",
+   "open_duration": "4h 10m",
    "open_pnl_pct": null,
    "open_pnl_usd": null,
    "opened_at": "15:00 UTC",
@@ -84,12 +94,18 @@
    "public_state": "\ud83d\udfe2 Trade tomado"
   },
   "ETHUSDT": {
+   "current_price": null,
+   "entry_price": 2512.42,
    "equity_usd": 9998.19,
    "name": "ETHUSDT",
+   "open_duration": "0h 10m",
+   "open_pnl_pct": null,
+   "open_pnl_usd": null,
+   "opened_at": "19:00 UTC",
    "pnl_pct": -0.02,
    "pnl_usd": -1.81,
-   "position": "NONE",
-   "public_state": "Esperando se\u00f1al"
+   "position": "LONG",
+   "public_state": "\ud83d\udfe2 Trade tomado"
   }
  },
  "trade_curve": [
