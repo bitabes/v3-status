@@ -2,6 +2,16 @@
  "activity": [
   {
    "icon": "\ud83d\udfe2",
+   "text": "ETH \u2014 LONG abierto a $2,459.84",
+   "time": "2026-09-04T17:00:14.426282+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "ETH \u2014 Se\u00f1al detectada",
+   "time": "2026-09-04T17:00:14.426282+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe2",
    "text": "BTC \u2014 LONG abierto a $79,386.87",
    "time": "2026-09-04T16:00:19.125211+00:00"
   },
@@ -89,28 +99,18 @@
    "icon": "\u26aa",
    "text": "BTC \u2014 Trade no tomado \u2014 entrada expirada por downtime (~119 min tarde)",
    "time": "2026-08-31T06:00:13.313773+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "BTC \u2014 Se\u00f1al LONG detectada",
-   "time": "2026-08-31T06:00:13.313773+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "BTC \u2014 Se\u00f1al detectada",
-   "time": "2026-08-31T04:08:14.959719+00:00"
   }
  ],
  "combined_current_capital": 19938.19,
  "combined_pnl_usd": -61.81,
  "combined_starting_capital": 20000.0,
- "episodes": 6,
+ "episodes": 7,
  "episodes_target": 120,
  "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-09-04T16:10:13.302085+00:00",
- "last_update_utc": "2026-09-04T16:00:20.125528+00:00",
+ "generated_utc": "2026-09-04T17:20:25.108079+00:00",
+ "last_update_utc": "2026-09-04T17:00:14.426282+00:00",
  "result_pct": -0.31,
- "signals_detected": 7,
+ "signals_detected": 8,
  "signals_skipped": 1,
  "status": "RUNNING",
  "symbols": {
@@ -119,7 +119,7 @@
    "entry_price": 79386.87,
    "equity_usd": 9968.41,
    "name": "BTCUSDT",
-   "open_duration": "0h 10m",
+   "open_duration": "1h 20m",
    "open_pnl_pct": null,
    "open_pnl_usd": null,
    "opened_at": "16:00 UTC",
@@ -129,12 +129,18 @@
    "public_state": "\ud83d\udfe2 Trade tomado"
   },
   "ETHUSDT": {
+   "current_price": null,
+   "entry_price": 2459.84,
    "equity_usd": 9969.78,
    "name": "ETHUSDT",
+   "open_duration": "0h 20m",
+   "open_pnl_pct": null,
+   "open_pnl_usd": null,
+   "opened_at": "17:00 UTC",
    "pnl_pct": -0.3,
    "pnl_usd": -30.22,
-   "position": "NONE",
-   "public_state": "Esperando se\u00f1al"
+   "position": "LONG",
+   "public_state": "\ud83d\udfe2 Trade tomado"
   }
  },
  "trade_curve": [
