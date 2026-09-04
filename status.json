@@ -97,8 +97,8 @@
  "episodes": 5,
  "episodes_target": 120,
  "general_state": "Recolectando datos",
- "generated_utc": "2026-09-04T13:10:15.692897+00:00",
- "last_update_utc": "2026-09-04T13:00:15.028103+00:00",
+ "generated_utc": "2026-09-04T14:10:30.018019+00:00",
+ "last_update_utc": "2026-09-04T14:00:14.303183+00:00",
  "result_pct": -0.31,
  "signals_detected": 6,
  "signals_skipped": 1,
@@ -118,7 +118,7 @@
    "pnl_pct": -0.3,
    "pnl_usd": -30.22,
    "position": "NONE",
-   "public_state": "\ud83d\udfe0 Entrada pendiente"
+   "public_state": "Esperando se\u00f1al"
   }
  },
  "trade_curve": [
