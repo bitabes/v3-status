@@ -2,6 +2,16 @@
  "activity": [
   {
    "icon": "\ud83d\udfe2",
+   "text": "BTC \u2014 LONG abierto a $78,397.18",
+   "time": "2026-09-08T09:00:19.518931+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "BTC \u2014 Se\u00f1al detectada",
+   "time": "2026-09-08T09:00:19.518931+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe2",
    "text": "ETH \u2014 LONG abierto a $2,476.93",
    "time": "2026-09-08T08:00:09.579062+00:00"
   },
@@ -89,45 +99,41 @@
    "icon": "\ud83d\udfe1",
    "text": "ETH \u2014 Se\u00f1al detectada",
    "time": "2026-09-03T19:00:13.864113+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe2",
-   "text": "BTC \u2014 LONG abierto a $80,591.32",
-   "time": "2026-09-03T15:00:12.981333+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "BTC \u2014 Se\u00f1al detectada",
-   "time": "2026-09-03T15:00:12.981333+00:00"
   }
  ],
  "combined_current_capital": 19903.41,
  "combined_pnl_usd": -96.59,
  "combined_starting_capital": 20000.0,
- "episodes": 9,
+ "episodes": 10,
  "episodes_target": 120,
  "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-09-08T08:10:18.080546+00:00",
- "last_update_utc": "2026-09-08T08:00:09.579062+00:00",
+ "generated_utc": "2026-09-08T09:10:10.110102+00:00",
+ "last_update_utc": "2026-09-08T09:00:20.555659+00:00",
  "result_pct": -0.48,
- "signals_detected": 10,
+ "signals_detected": 11,
  "signals_skipped": 1,
  "status": "RUNNING",
  "symbols": {
   "BTCUSDT": {
+   "current_price": null,
+   "entry_price": 78397.18,
    "equity_usd": 9952.11,
    "name": "BTCUSDT",
+   "open_duration": "0h 10m",
+   "open_pnl_pct": null,
+   "open_pnl_usd": null,
+   "opened_at": "09:00 UTC",
    "pnl_pct": -0.48,
    "pnl_usd": -47.89,
-   "position": "NONE",
-   "public_state": "Esperando se\u00f1al"
+   "position": "LONG",
+   "public_state": "\ud83d\udfe2 Trade tomado"
   },
   "ETHUSDT": {
    "current_price": null,
    "entry_price": 2476.93,
    "equity_usd": 9951.31,
    "name": "ETHUSDT",
-   "open_duration": "0h 10m",
+   "open_duration": "1h 10m",
    "open_pnl_pct": null,
    "open_pnl_usd": null,
    "opened_at": "08:00 UTC",
