@@ -1,6 +1,11 @@
 {
  "activity": [
   {
+   "icon": "\ud83d\udd34",
+   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,488.99 \u00b7 Stop Loss: $2,461.81 (-1.09%) \u00b7 Notional: $1,794.91 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $179.49 / $149.58 / $128.21 \u00b7 Salida: $2,473.92 \u00b7 Movimiento del activo: -0.61% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.79 \u00b7 Funding: 0.00 \u00b7 PnL precio: -$10.87 \u00b7 PnL neto: -$12.66 \u00b7 Equity ETH: $10,000.00 \u2192 $9,987.34",
+   "time": "2026-09-13T23:00:16.690766+00:00"
+  },
+  {
    "icon": "\ud83d\udfe2",
    "text": "ETH \u2014 LONG abierto a $2,488.99",
    "time": "2026-09-13T15:00:23.800062+00:00"
@@ -12,7 +17,7 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,508.12 \u00b7 Stop Loss: $2,469.14 (-1.55%) \u00b7 Notional: $1,396.87 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $139.69 / $116.41 / $99.78 \u00b7 Salida: $2,492.75 \u00b7 Movimiento del activo: -0.61% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.39 \u00b7 Funding: 0.00 \u00b7 PnL precio: -$8.56 \u00b7 PnL neto: -$9.95 \u00b7 Equity ETH: $10,000.00 \u2192 $9,990.05",
+   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,508.12 \u00b7 Stop Loss: $2,469.14 (-1.55%) \u00b7 Notional: $1,396.87 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $139.69 / $116.41 / $99.78 \u00b7 Salida: $2,473.92 \u00b7 Movimiento del activo: -1.36% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.79 \u00b7 PnL neto: -$12.66 \u00b7 Equity ETH: $10,002.71 \u2192 $9,990.05",
    "time": "2026-09-13T09:00:18.100720+00:00"
   },
   {
@@ -27,7 +32,7 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,435.42 \u00b7 Stop Loss: $2,397.76 (-1.55%) \u00b7 Notional: $1,472.77 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $147.28 / $122.73 / $105.20 \u00b7 Salida: $2,492.75 \u00b7 Movimiento del activo: +2.35% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.39 \u00b7 PnL neto: -$9.95 \u00b7 Equity ETH: $10,012.34 \u2192 $10,002.39",
+   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,435.42 \u00b7 Stop Loss: $2,397.76 (-1.55%) \u00b7 Notional: $1,472.77 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $147.28 / $122.73 / $105.20 \u00b7 Salida: $2,473.92 \u00b7 Movimiento del activo: +1.58% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.79 \u00b7 PnL neto: -$12.66 \u00b7 Equity ETH: $10,015.05 \u2192 $10,002.39",
    "time": "2026-09-10T15:00:13.212646+00:00"
   },
   {
@@ -42,7 +47,7 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,476.93 \u00b7 Stop Loss: $2,448.51 (-1.15%) \u00b7 Notional: $1,974.10 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $197.41 / $164.51 / $141.01 \u00b7 Salida: $2,492.75 \u00b7 Movimiento del activo: +0.64% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.39 \u00b7 PnL neto: -$9.95 \u00b7 Equity ETH: $9,984.95 \u2192 $9,975.00",
+   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,476.93 \u00b7 Stop Loss: $2,448.51 (-1.15%) \u00b7 Notional: $1,974.10 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $197.41 / $164.51 / $141.01 \u00b7 Salida: $2,473.92 \u00b7 Movimiento del activo: -0.12% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.79 \u00b7 PnL neto: -$12.66 \u00b7 Equity ETH: $9,987.66 \u2192 $9,975.00",
    "time": "2026-09-08T14:00:08.248422+00:00"
   },
   {
@@ -77,7 +82,7 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,499.00 \u00b7 Stop Loss: $2,473.62 (-1.02%) \u00b7 Notional: $2,206.64 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $220.66 / $183.89 / $157.62 \u00b7 Salida: $2,492.75 \u00b7 Movimiento del activo: -0.25% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.39 \u00b7 PnL neto: -$9.95 \u00b7 Equity ETH: $9,984.91 \u2192 $9,974.95",
+   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,499.00 \u00b7 Stop Loss: $2,473.62 (-1.02%) \u00b7 Notional: $2,206.64 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $220.66 / $183.89 / $157.62 \u00b7 Salida: $2,473.92 \u00b7 Movimiento del activo: -1.00% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.79 \u00b7 PnL neto: -$12.66 \u00b7 Equity ETH: $9,987.61 \u2192 $9,974.95",
    "time": "2026-09-07T08:00:16.883468+00:00"
   },
   {
@@ -92,24 +97,19 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,459.84 \u00b7 Stop Loss: $2,411.22 (-1.98%) \u00b7 Notional: $1,033.89 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $103.39 / $86.16 / $73.85 \u00b7 Salida: $2,492.75 \u00b7 Movimiento del activo: +1.34% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.39 \u00b7 PnL neto: -$9.95 \u00b7 Equity ETH: $10,016.52 \u2192 $10,006.57",
+   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,459.84 \u00b7 Stop Loss: $2,411.22 (-1.98%) \u00b7 Notional: $1,033.89 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $103.39 / $86.16 / $73.85 \u00b7 Salida: $2,473.92 \u00b7 Movimiento del activo: +0.57% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.79 \u00b7 PnL neto: -$12.66 \u00b7 Equity ETH: $10,019.23 \u2192 $10,006.57",
    "time": "2026-09-06T16:00:13.430544+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe2",
-   "text": "ETH \u2014 LONG abierto a $2,459.84",
-   "time": "2026-09-04T17:00:14.426282+00:00"
   }
  ],
- "combined_current_capital": 19836.86,
- "combined_pnl_usd": -163.14,
+ "combined_current_capital": 19824.2,
+ "combined_pnl_usd": -175.8,
  "combined_starting_capital": 20000.0,
  "episodes": 13,
  "episodes_target": 120,
- "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-09-13T22:10:14.353082+00:00",
- "last_update_utc": "2026-09-13T22:00:16.376441+00:00",
- "result_pct": -0.82,
+ "general_state": "Recolectando datos",
+ "generated_utc": "2026-09-13T23:10:14.279677+00:00",
+ "last_update_utc": "2026-09-13T23:00:16.690766+00:00",
+ "result_pct": -0.88,
  "signals_detected": 14,
  "signals_skipped": 1,
  "status": "RUNNING",
@@ -123,18 +123,12 @@
    "public_state": "Esperando se\u00f1al"
   },
   "ETHUSDT": {
-   "current_price": null,
-   "entry_price": 2488.99,
-   "equity_usd": 9918.74,
+   "equity_usd": 9906.08,
    "name": "ETHUSDT",
-   "open_duration": "7h 10m",
-   "open_pnl_pct": null,
-   "open_pnl_usd": null,
-   "opened_at": "15:00 UTC",
-   "pnl_pct": -0.81,
-   "pnl_usd": -81.26,
-   "position": "LONG",
-   "public_state": "\ud83d\udfe2 Trade tomado"
+   "pnl_pct": -0.94,
+   "pnl_usd": -93.92,
+   "position": "NONE",
+   "public_state": "\ud83d\udfe0 Entrada pendiente"
   }
  },
  "trade_curve": [
@@ -516,13 +510,44 @@
    "stop_price": 2469.14,
    "symbol": "ETHUSDT",
    "trade": 12
+  },
+  {
+   "accepted_leverages": [
+    10,
+    12,
+    14
+   ],
+   "closed_at": "2026-09-13T22:00:00+00:00",
+   "cumulative_pct": -0.94,
+   "duration": "7h 00m",
+   "entry_at": "2026-09-13T15:00:00+00:00",
+   "entry_price": 2488.99,
+   "exit_price": 2473.92,
+   "exit_reason": "Strategy Exit",
+   "fees": -1.79,
+   "funding": 0,
+   "margins": {
+    "10": 179.49,
+    "12": 149.58,
+    "14": 128.21
+   },
+   "move_pct": -0.61,
+   "notional": 1794.91,
+   "outcome": "LOSS",
+   "pnl_price": -10.87,
+   "public_equity_usd": 9906.08,
+   "public_impact_usd": -12.66,
+   "stop_pct": -1.09,
+   "stop_price": 2461.81,
+   "symbol": "ETHUSDT",
+   "trade": 13
   }
  ],
  "trade_stats": {
-  "closed": 12,
-  "loss": 10,
+  "closed": 13,
+  "loss": 11,
   "win": 2,
-  "win_rate": 16.67
+  "win_rate": 15.38
  },
- "trades": 12
+ "trades": 13
 }
