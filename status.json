@@ -107,8 +107,8 @@
  "episodes": 15,
  "episodes_target": 120,
  "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-09-14T20:10:15.929388+00:00",
- "last_update_utc": "2026-09-14T20:00:17.480925+00:00",
+ "generated_utc": "2026-09-14T21:10:14.395820+00:00",
+ "last_update_utc": "2026-09-14T21:00:19.754076+00:00",
  "result_pct": -0.92,
  "signals_detected": 16,
  "signals_skipped": 1,
@@ -120,14 +120,14 @@
    "pnl_pct": -0.91,
    "pnl_usd": -90.83,
    "position": "NONE",
-   "public_state": "\ud83d\udfe0 Entrada pendiente"
+   "public_state": "Esperando se\u00f1al"
   },
   "ETHUSDT": {
    "current_price": null,
    "entry_price": 2513.44,
    "equity_usd": 9906.08,
    "name": "ETHUSDT",
-   "open_duration": "16h 10m",
+   "open_duration": "17h 10m",
    "open_pnl_pct": null,
    "open_pnl_usd": null,
    "opened_at": "04:00 UTC",
