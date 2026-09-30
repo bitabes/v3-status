@@ -1,6 +1,11 @@
 {
  "activity": [
   {
+   "icon": "\ud83d\udd34",
+   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $84,116.72 \u00b7 Stop Loss: $82,851.53 (-1.50%) \u00b7 Notional: $1,801.98 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $180.20 / $150.17 / $128.71 \u00b7 Salida: $83,983.20 \u00b7 Movimiento del activo: -0.16% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.80 \u00b7 Funding: 0.00 \u00b7 PnL precio: -$2.86 \u00b7 PnL neto: -$4.66 \u00b7 Equity BTC: $10,000.00 \u2192 $9,995.34",
+   "time": "2026-09-30T18:00:15.125347+00:00"
+  },
+  {
    "icon": "\ud83d\udfe2",
    "text": "BTC \u2014 LONG abierto a $84,116.72",
    "time": "2026-09-30T16:00:15.722019+00:00"
@@ -27,7 +32,7 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 WIN \u00b7 Entrada: $76,971.29 \u00b7 Stop Loss: $76,201.58 (-1.00%) \u00b7 Notional: $3,315.13 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $331.51 / $276.26 / $236.79 \u00b7 Salida: $82,914.51 \u00b7 Movimiento del activo: +7.72% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$3.44 \u00b7 Funding: 0.00 \u00b7 PnL precio: +$255.97 \u00b7 PnL neto: +$252.53 \u00b7 Equity BTC: $10,000.00 \u2192 $10,252.53",
+   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $76,971.29 \u00b7 Stop Loss: $76,201.58 (-1.00%) \u00b7 Notional: $3,315.13 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $331.51 / $276.26 / $236.79 \u00b7 Salida: $83,983.20 \u00b7 Movimiento del activo: +9.11% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.80 \u00b7 PnL neto: -$4.66 \u00b7 Equity BTC: $10,257.19 \u2192 $10,252.53",
    "time": "2026-09-28T09:00:15.161938+00:00"
   },
   {
@@ -94,39 +99,28 @@
    "icon": "\ud83d\udfe2",
    "text": "ETH \u2014 LONG abierto a $2,482.84",
    "time": "2026-09-15T11:00:12.535563+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "ETH \u2014 Se\u00f1al detectada",
-   "time": "2026-09-15T11:00:12.535563+00:00"
   }
  ],
- "combined_current_capital": 20034.45,
- "combined_pnl_usd": 34.45,
+ "combined_current_capital": 20029.79,
+ "combined_pnl_usd": 29.79,
  "combined_starting_capital": 20000.0,
  "episodes": 22,
  "episodes_target": 120,
- "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-09-30T17:10:10.784484+00:00",
- "last_update_utc": "2026-09-30T17:00:21.156077+00:00",
- "result_pct": 0.17,
+ "general_state": "Recolectando datos",
+ "generated_utc": "2026-09-30T18:10:10.224713+00:00",
+ "last_update_utc": "2026-09-30T18:00:16.684159+00:00",
+ "result_pct": 0.15,
  "signals_detected": 23,
  "signals_skipped": 1,
  "status": "RUNNING",
  "symbols": {
   "BTCUSDT": {
-   "current_price": null,
-   "entry_price": 84116.72,
-   "equity_usd": 10161.7,
+   "equity_usd": 10157.04,
    "name": "BTCUSDT",
-   "open_duration": "1h 10m",
-   "open_pnl_pct": null,
-   "open_pnl_usd": null,
-   "opened_at": "16:00 UTC",
-   "pnl_pct": 1.62,
-   "pnl_usd": 161.7,
-   "position": "LONG",
-   "public_state": "\ud83d\udfe2 Trade tomado"
+   "pnl_pct": 1.57,
+   "pnl_usd": 157.04,
+   "position": "NONE",
+   "public_state": "\ud83d\udfe0 Entrada pendiente"
   },
   "ETHUSDT": {
    "equity_usd": 9872.75,
@@ -795,13 +789,44 @@
    "stop_price": 2694.78,
    "symbol": "ETHUSDT",
    "trade": 21
+  },
+  {
+   "accepted_leverages": [
+    10,
+    12,
+    14
+   ],
+   "closed_at": "2026-09-30T17:00:00+00:00",
+   "cumulative_pct": 1.57,
+   "duration": "1h 00m",
+   "entry_at": "2026-09-30T16:00:00+00:00",
+   "entry_price": 84116.72,
+   "exit_price": 83983.2,
+   "exit_reason": "Strategy Exit",
+   "fees": -1.8,
+   "funding": 0,
+   "margins": {
+    "10": 180.2,
+    "12": 150.17,
+    "14": 128.71
+   },
+   "move_pct": -0.16,
+   "notional": 1801.98,
+   "outcome": "LOSS",
+   "pnl_price": -2.86,
+   "public_equity_usd": 10157.04,
+   "public_impact_usd": -4.66,
+   "stop_pct": -1.5,
+   "stop_price": 82851.53,
+   "symbol": "BTCUSDT",
+   "trade": 22
   }
  ],
  "trade_stats": {
-  "closed": 21,
-  "loss": 17,
+  "closed": 22,
+  "loss": 18,
   "win": 4,
-  "win_rate": 19.05
+  "win_rate": 18.18
  },
- "trades": 21
+ "trades": 22
 }
