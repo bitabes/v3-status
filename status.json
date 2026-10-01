@@ -1,6 +1,41 @@
 {
  "activity": [
   {
+   "icon": "\ud83d\udfe1",
+   "text": "ETH \u2014 Se\u00f1al detectada",
+   "time": "2026-10-01T11:35:18.908197+00:00"
+  },
+  {
+   "icon": "\u26aa",
+   "text": "ETH \u2014 Trade no tomado \u2014 entrada expirada por downtime",
+   "time": "2026-10-01T11:35:18.907979+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "ETH \u2014 Se\u00f1al LONG detectada",
+   "time": "2026-10-01T11:35:18.907979+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "BTC \u2014 Se\u00f1al detectada",
+   "time": "2026-10-01T11:35:17.234344+00:00"
+  },
+  {
+   "icon": "\u26aa",
+   "text": "BTC \u2014 Trade no tomado \u2014 entrada expirada por downtime",
+   "time": "2026-10-01T11:35:17.234140+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "BTC \u2014 Se\u00f1al LONG detectada",
+   "time": "2026-10-01T11:35:17.234140+00:00"
+  },
+  {
+   "icon": "\ud83d\udd34",
+   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $84,047.01 \u00b7 Stop Loss: $83,165.75 (-1.05%) \u00b7 Notional: $2,816.69 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $281.67 / $234.72 / $201.19 \u00b7 Salida: $83,364.92 \u00b7 Movimiento del activo: -0.81% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$2.81 \u00b7 Funding: 0.00 \u00b7 PnL precio: -$22.86 \u00b7 PnL neto: -$25.66 \u00b7 Equity BTC: $10,000.00 \u2192 $9,974.34",
+   "time": "2026-10-01T11:35:16.231533+00:00"
+  },
+  {
    "icon": "\ud83d\udfe2",
    "text": "BTC \u2014 LONG abierto a $84,047.01",
    "time": "2026-10-01T05:00:12.380362+00:00"
@@ -27,7 +62,7 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $84,116.72 \u00b7 Stop Loss: $82,851.53 (-1.50%) \u00b7 Notional: $1,801.98 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $180.20 / $150.17 / $128.71 \u00b7 Salida: $83,983.20 \u00b7 Movimiento del activo: -0.16% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.80 \u00b7 Funding: 0.00 \u00b7 PnL precio: -$2.86 \u00b7 PnL neto: -$4.66 \u00b7 Equity BTC: $10,000.00 \u2192 $9,995.34",
+   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $84,116.72 \u00b7 Stop Loss: $82,851.53 (-1.50%) \u00b7 Notional: $1,801.98 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $180.20 / $150.17 / $128.71 \u00b7 Salida: $83,364.92 \u00b7 Movimiento del activo: -0.89% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$2.81 \u00b7 PnL neto: -$25.66 \u00b7 Equity BTC: $10,021.00 \u2192 $9,995.34",
    "time": "2026-09-30T18:00:15.125347+00:00"
   },
   {
@@ -57,76 +92,35 @@
   },
   {
    "icon": "\ud83d\udd34",
-   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $76,971.29 \u00b7 Stop Loss: $76,201.58 (-1.00%) \u00b7 Notional: $3,315.13 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $331.51 / $276.26 / $236.79 \u00b7 Salida: $83,983.20 \u00b7 Movimiento del activo: +9.11% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.80 \u00b7 PnL neto: -$4.66 \u00b7 Equity BTC: $10,257.19 \u2192 $10,252.53",
+   "text": "BTC \u2014 BTCUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $76,971.29 \u00b7 Stop Loss: $76,201.58 (-1.00%) \u00b7 Notional: $3,315.13 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $331.51 / $276.26 / $236.79 \u00b7 Salida: $83,364.92 \u00b7 Movimiento del activo: +8.31% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$2.81 \u00b7 PnL neto: -$25.66 \u00b7 Equity BTC: $10,278.19 \u2192 $10,252.53",
    "time": "2026-09-28T09:00:15.161938+00:00"
   },
   {
    "icon": "\ud83d\udd34",
    "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,583.86 \u00b7 Stop Loss: $2,537.88 (-1.78%) \u00b7 Notional: $1,102.05 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $110.21 / $91.84 / $78.72 \u00b7 Salida: $2,685.14 \u00b7 Movimiento del activo: +3.92% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.58 \u00b7 PnL neto: -$0.12 \u00b7 Equity ETH: $10,036.49 \u2192 $10,036.37",
    "time": "2026-09-28T01:00:16.791597+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe2",
-   "text": "ETH \u2014 LONG abierto a $2,583.86",
-   "time": "2026-09-18T16:00:11.943557+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "ETH \u2014 Se\u00f1al detectada",
-   "time": "2026-09-18T16:00:11.943557+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe2",
-   "text": "BTC \u2014 LONG abierto a $76,971.29",
-   "time": "2026-09-18T03:00:08.611844+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "BTC \u2014 Se\u00f1al detectada",
-   "time": "2026-09-18T03:00:08.611844+00:00"
-  },
-  {
-   "icon": "\ud83d\udd34",
-   "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,445.38 \u00b7 Stop Loss: $2,407.87 (-1.53%) \u00b7 Notional: $1,319.55 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $131.95 / $109.96 / $94.25 \u00b7 Salida: $2,685.14 \u00b7 Movimiento del activo: +9.80% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.58 \u00b7 PnL neto: -$0.12 \u00b7 Equity ETH: $9,999.52 \u2192 $9,999.40",
-   "time": "2026-09-18T01:00:11.037188+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe2",
-   "text": "ETH \u2014 LONG abierto a $2,445.38",
-   "time": "2026-09-17T23:00:09.833192+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "ETH \u2014 Se\u00f1al detectada",
-   "time": "2026-09-17T23:00:09.833192+00:00"
   }
  ],
- "combined_current_capital": 20029.67,
- "combined_pnl_usd": 29.67,
+ "combined_current_capital": 20004.0,
+ "combined_pnl_usd": 4.0,
  "combined_starting_capital": 20000.0,
  "episodes": 24,
  "episodes_target": 120,
- "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-10-01T07:10:32.886712+00:00",
- "last_update_utc": "2026-10-01T07:00:58.958763+00:00",
- "result_pct": 0.15,
- "signals_detected": 25,
+ "general_state": "Recolectando datos",
+ "generated_utc": "2026-10-01T11:40:05.557843+00:00",
+ "last_update_utc": "2026-10-01T11:35:20.158000+00:00",
+ "result_pct": 0.02,
+ "signals_detected": 27,
  "signals_skipped": 1,
  "status": "RUNNING",
  "symbols": {
   "BTCUSDT": {
-   "current_price": null,
-   "entry_price": 84047.01,
-   "equity_usd": 10157.04,
+   "equity_usd": 10131.38,
    "name": "BTCUSDT",
-   "open_duration": "2h 10m",
-   "open_pnl_pct": null,
-   "open_pnl_usd": null,
-   "opened_at": "05:00 UTC",
-   "pnl_pct": 1.57,
-   "pnl_usd": 157.04,
-   "position": "LONG",
-   "public_state": "\ud83d\udfe2 Trade tomado"
+   "pnl_pct": 1.31,
+   "pnl_usd": 131.38,
+   "position": "NONE",
+   "public_state": "Esperando se\u00f1al"
   },
   "ETHUSDT": {
    "equity_usd": 9872.63,
@@ -134,7 +128,7 @@
    "pnl_pct": -1.27,
    "pnl_usd": -127.37,
    "position": "NONE",
-   "public_state": "\ud83d\udfe0 Entrada pendiente"
+   "public_state": "Esperando se\u00f1al"
   }
  },
  "trade_curve": [
@@ -857,13 +851,44 @@
    "stop_price": 2642.6,
    "symbol": "ETHUSDT",
    "trade": 23
+  },
+  {
+   "accepted_leverages": [
+    10,
+    12,
+    14
+   ],
+   "closed_at": "2026-10-01T07:00:00+00:00",
+   "cumulative_pct": 1.31,
+   "duration": "2h 00m",
+   "entry_at": "2026-10-01T05:00:00+00:00",
+   "entry_price": 84047.01,
+   "exit_price": 83364.92,
+   "exit_reason": "Strategy Exit",
+   "fees": -2.81,
+   "funding": 0,
+   "margins": {
+    "10": 281.67,
+    "12": 234.72,
+    "14": 201.19
+   },
+   "move_pct": -0.81,
+   "notional": 2816.69,
+   "outcome": "LOSS",
+   "pnl_price": -22.86,
+   "public_equity_usd": 10131.38,
+   "public_impact_usd": -25.66,
+   "stop_pct": -1.05,
+   "stop_price": 83165.75,
+   "symbol": "BTCUSDT",
+   "trade": 24
   }
  ],
  "trade_stats": {
-  "closed": 23,
-  "loss": 19,
+  "closed": 24,
+  "loss": 20,
   "win": 4,
-  "win_rate": 17.39
+  "win_rate": 16.67
  },
- "trades": 23
+ "trades": 24
 }
