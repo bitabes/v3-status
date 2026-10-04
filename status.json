@@ -107,8 +107,8 @@
  "episodes": 29,
  "episodes_target": 120,
  "general_state": "Operaci\u00f3n activa",
- "generated_utc": "2026-10-04T06:10:00.456653+00:00",
- "last_update_utc": "2026-10-04T06:00:07.765757+00:00",
+ "generated_utc": "2026-10-04T07:10:00.213111+00:00",
+ "last_update_utc": "2026-10-04T07:00:07.459164+00:00",
  "result_pct": -0.06,
  "signals_detected": 32,
  "signals_skipped": 1,
@@ -119,7 +119,7 @@
    "entry_price": 84872.47,
    "equity_usd": 10131.69,
    "name": "BTCUSDT",
-   "open_duration": "60h 10m",
+   "open_duration": "61h 10m",
    "open_pnl_pct": null,
    "open_pnl_usd": null,
    "opened_at": "18:00 UTC",
@@ -134,7 +134,7 @@
    "pnl_pct": -1.44,
    "pnl_usd": -144.29,
    "position": "NONE",
-   "public_state": "\ud83d\udfe0 Entrada pendiente"
+   "public_state": "Esperando se\u00f1al"
   }
  },
  "trade_curve": [
@@ -1006,7 +1006,7 @@
    "notional": 2706.55,
    "outcome": "LOSS",
    "pnl_price": 1.26,
-   "public_equity_usd": 9855.71,
+   "public_equity_usd": 9855.73,
    "public_impact_usd": -1.45,
    "stop_pct": -1.0,
    "stop_price": 2664.87,
