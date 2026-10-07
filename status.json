@@ -107,8 +107,8 @@
  "episodes": 33,
  "episodes_target": 120,
  "general_state": "Recolectando datos",
- "generated_utc": "2026-10-07T10:10:00.214807+00:00",
- "last_update_utc": "2026-10-07T10:00:07.605209+00:00",
+ "generated_utc": "2026-10-07T11:10:00.475987+00:00",
+ "last_update_utc": "2026-10-07T11:00:07.221421+00:00",
  "result_pct": -0.61,
  "signals_detected": 36,
  "signals_skipped": 1,
@@ -120,7 +120,7 @@
    "pnl_pct": 0.99,
    "pnl_usd": 99.47,
    "position": "NONE",
-   "public_state": "\ud83d\udfe0 Entrada pendiente"
+   "public_state": "Esperando se\u00f1al"
   },
   "ETHUSDT": {
    "equity_usd": 9777.84,
