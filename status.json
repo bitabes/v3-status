@@ -107,8 +107,8 @@
  "episodes": 49,
  "episodes_target": 120,
  "general_state": "Recolectando datos",
- "generated_utc": "2026-11-07T12:10:05.358220+00:00",
- "last_update_utc": "2026-11-07T12:00:08.836362+00:00",
+ "generated_utc": "2026-11-07T13:10:05.645120+00:00",
+ "last_update_utc": "2026-11-07T13:00:07.235306+00:00",
  "result_pct": -1.54,
  "signals_detected": 52,
  "signals_skipped": 1,
@@ -128,7 +128,7 @@
    "pnl_pct": -3.05,
    "pnl_usd": -305.08,
    "position": "NONE",
-   "public_state": "\ud83d\udfe0 Entrada pendiente"
+   "public_state": "Esperando se\u00f1al"
   }
  },
  "trade_curve": [
@@ -1651,7 +1651,7 @@
    "notional": 1299.68,
    "outcome": "LOSS",
    "pnl_price": -1.89,
-   "public_equity_usd": 9694.91,
+   "public_equity_usd": 9694.92,
    "public_impact_usd": -3.19,
    "stop_pct": -1.45,
    "stop_price": 2214.46,
