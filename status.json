@@ -3,6 +3,16 @@
   {
    "icon": "\ud83d\udd34",
    "text": "ETH \u2014 Trade rechazado \u2014 vol_filter",
+   "time": "2026-11-27T05:00:16.547839+00:00"
+  },
+  {
+   "icon": "\ud83d\udfe1",
+   "text": "ETH \u2014 Se\u00f1al detectada",
+   "time": "2026-11-27T05:00:16.547839+00:00"
+  },
+  {
+   "icon": "\ud83d\udd34",
+   "text": "ETH \u2014 Trade rechazado \u2014 vol_filter",
    "time": "2026-11-23T14:00:25.706016+00:00"
   },
   {
@@ -89,28 +99,18 @@
    "icon": "\ud83d\udd34",
    "text": "ETH \u2014 ETHUSDT \u2014 LONG \u00b7 LOSS \u00b7 Entrada: $2,245.80 \u00b7 Stop Loss: $2,194.49 (-2.28%) \u00b7 Notional: $804.09 \u00b7 Leverage aceptable: 10x / 12x / 14x \u00b7 Margen requerido: $80.41 / $67.01 / $57.43 \u00b7 Salida: $2,235.74 \u00b7 Movimiento del activo: -0.45% \u00b7 Motivo salida: Strategy Exit \u00b7 Fees: -$1.90 \u00b7 PnL neto: -$10.73 \u00b7 Equity ETH: $10,005.96 \u2192 $9,995.23",
    "time": "2026-11-06T04:00:07.358089+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe2",
-   "text": "ETH \u2014 LONG abierto a $2,245.80",
-   "time": "2026-11-06T01:00:07.964574+00:00"
-  },
-  {
-   "icon": "\ud83d\udfe1",
-   "text": "ETH \u2014 Se\u00f1al detectada",
-   "time": "2026-11-06T01:00:07.964574+00:00"
   }
  ],
  "combined_current_capital": 19681.06,
  "combined_pnl_usd": -318.94,
  "combined_starting_capital": 20000.0,
- "episodes": 51,
+ "episodes": 52,
  "episodes_target": 120,
  "general_state": "Recolectando datos",
- "generated_utc": "2026-11-27T04:10:21.005471+00:00",
- "last_update_utc": "2026-11-27T04:00:13.314836+00:00",
+ "generated_utc": "2026-11-27T05:10:17.840383+00:00",
+ "last_update_utc": "2026-11-27T05:00:16.547839+00:00",
  "result_pct": -1.59,
- "signals_detected": 54,
+ "signals_detected": 55,
  "signals_skipped": 1,
  "status": "RUNNING",
  "symbols": {
@@ -128,7 +128,7 @@
    "pnl_pct": -3.16,
    "pnl_usd": -315.82,
    "position": "NONE",
-   "public_state": "Esperando se\u00f1al"
+   "public_state": "\ud83d\udfe0 Entrada pendiente"
   }
  },
  "trade_curve": [
